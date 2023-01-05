@@ -12,8 +12,8 @@ DB_FILE = os.environ.get("DB_FILE")
 def main():
     with sqlite3.connect(DB_FILE) as conn:
         curs = conn.cursor()
-    curs.execute(
-        "SELECT id, name, start_datetime, end_datetime FROM appointments ORDER BY start_datetime;")
-    rows = curs.fetchall()
-
+        curs.execute(
+            "SELECT id, name, start_datetime, end_datetime FROM appointments ORDER BY start_datetime;")
+        rows = curs.fetchall()
+        print(rows, "<----------------rows")
     return render_template('main.html', rows=rows)

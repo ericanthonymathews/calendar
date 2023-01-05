@@ -19,14 +19,13 @@
             </tr>
         </thead>
         <tbody>
-            <!-- loop here to create rows -->
             {% for row in rows %}
-
             <tr>
                 <td>{{ row.name }}</td>
                 <td>{{ row.start_datetime }}</td>
                 <td>{{ row.end_datetime }}</td>
             </tr>
+            <!-- loop here to create rows -->
             <!-- use strftime to format date objects -->
             <!-- loop here to create rows -->
             {% endfor %}
